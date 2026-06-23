@@ -1,0 +1,32 @@
+# --- Virtual environments (recreate with requirements.txt) ---
+hokkien_speech_env/
+omnivoice_env/
+
+# --- Model weights: downloadable, never commit (see SETUP_NOTES.md) ---
+# ...but keep the small Modelfile (it documents how to build the taigi model).
+models/*
+!models/taigi/
+models/taigi/*
+!models/taigi/Modelfile
+*.pth
+*.gguf
+*.safetensors
+goruut_bin/
+.goruut_bin/
+
+# --- Generated audio + YOUR personal voice (do NOT publish your voice) ---
+*.wav
+
+# --- Runtime / logs ---
+chat_app.log
+*.pid
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,19 @@
+# HokkienTTS — omnivoice_env dependencies (Python 3.11).
+#
+# IMPORTANT: install PyTorch FIRST from the CUDA index, then the rest:
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124
+#   pip install -r requirements.txt
+#
+# Models are NOT in this repo — they download on first run:
+#   - Ollama:  ollama pull qwen2.5:3b   (Taigi: build from models/taigi/Modelfile)
+#   - OmniVoice: auto-downloads from HuggingFace on first run
+# See SETUP_NOTES.md for the full setup.
+
+omnivoice                       # MERaLiON OmniVoice TTS engine
+transformers>=5.3
+soundfile
+sounddevice                     # mic recording (record_voice.py)
+opencc-python-reimplemented     # Simplified -> Traditional Chinese fix
+gradio                          # the chat web UI
+numpy
+pip-system-certs                # Windows: trust the system cert store (Norton SSL)

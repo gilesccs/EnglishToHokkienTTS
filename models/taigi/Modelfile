@@ -1,0 +1,19 @@
+FROM C:\Users\giles\github\HokkienTTS\models\taigi\Taigi-Llama-2-Translator-7B.Q4_K_M.gguf
+
+# Taigi-Llama translator expects this exact template; [HAN] = output Hokkien Han characters.
+TEMPLATE """[TRANS]
+{{ .Prompt }}
+[/TRANS]
+[HAN]
+"""
+
+# Translation should be deterministic, and stop once the first block is produced.
+PARAMETER temperature 0.1
+PARAMETER stop "[TRANS]"
+PARAMETER stop "[/TRANS]"
+PARAMETER stop "[HAN]"
+PARAMETER stop "[/HAN]"
+PARAMETER stop "[ZH]"
+PARAMETER stop "[EN]"
+PARAMETER stop "[POJ]"
+PARAMETER stop "[HL]"
