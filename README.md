@@ -5,7 +5,7 @@ Hokkien** — eventually in your own cloned voice, behind a chat interface.
 
 Everything runs on your own GPU. No APIs, no cloud, no telemetry.
 
-Full design notes: [`CLAUDE.md`](CLAUDE.md) · Setup gotchas: [`SETUP_NOTES.md`](SETUP_NOTES.md)
+Setup gotchas: [`SETUP_NOTES.md`](SETUP_NOTES.md)
 
 ---
 
